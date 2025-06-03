@@ -1,0 +1,41 @@
+schema:
+  type: object
+  description: "Schema for preferences, compatible with OpenAI, Gemini, and other AI systems."
+  properties:
+    preferences:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+            description: "Name of the person"
+          likes:
+            type: array
+            items:
+              type: string
+              description: "Items the person likes"
+          dislikes:
+            type: array
+            items:
+              type: string
+              description: "Items the person dislikes"
+examples:
+  - name: Tony
+    likes:
+      - apples
+      - apple pie
+      - orange juice
+    dislikes:
+      - oranges
+      - apple cider
+      - orange peels
+  - name: Dan
+    likes:
+      - grapes
+    dislikes:
+      - bananas
+  - name: Alice
+    likes: []
+    dislikes:
+      - vegetables
